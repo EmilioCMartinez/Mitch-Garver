@@ -30,7 +30,7 @@ data_mitch.loc[(data_mitch['events'] != 'single') & (data_mitch['events'] != 'do
 
 #--------------------------------------------
 
-plt.hexbin(data_mitch['launch_speed'], data_mitch['launch_angle'], C=data_mitch['hit_out']=='hit',cmap=plt.cm.Paired, gridsize = 55)
+plt.hexbin(data_mitch['launch_speed'], data_mitch['launch_angle'], C=data_mitch['hit_out']=='hit',cmap=plt.cm.YlOrRd, gridsize = 55)
 cb = plt.colorbar()
 cb.set_label('Hit Probablity')
 plt.xlabel('Exit Velocity')
@@ -39,7 +39,7 @@ plt.title('Mitch Garver Career Hit Probability by EV & LA')
 plt.xlim(0,130)
 plt.show()
 #--------------------------------------------
-plt.hexbin(data_mitch['hc_x'], data_mitch['hc_y']*-1, C=data_mitch['hit_out']=='hit',cmap=plt.cm.coolwarm, gridsize = 70)
+plt.hexbin(data_mitch['hc_x'], data_mitch['hc_y']*-1, C=data_mitch['hit_out']=='hit',cmap=plt.cm.YlOrRd, gridsize = 70)
 cb = plt.colorbar()
 cb.set_label('Hit Probablity')
 plt.xlabel('Exit Velocity')
