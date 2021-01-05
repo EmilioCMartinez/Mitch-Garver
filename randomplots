@@ -108,7 +108,7 @@ def plot_stadium(team, color):
     plt.axis('off')
 
 plot_stadium('twins','black') 
-plt.hexbin(data_mitch['hc_x'], data_mitch['hc_y']*-1, C=data_mitch['hit_out']=='hit',cmap=plt.cm.coolwarm, gridsize = 70)
+plt.hexbin(data_mitch['hc_x'], data_mitch['hc_y']*-1, C=data_mitch['hit_out']=='hit',cmap=plt.cm.YlOrRd, gridsize = 70)
 cb = plt.colorbar()
 cb.set_label('Hit Probablity')
 plt.xlabel('Exit Velocity')
